@@ -1,0 +1,22 @@
+[ Setup ]
+
+Puth cakephp source directory and patch file in the same directory.
+
+$ ls -o
+total 8
+drwxrwxr-x 2 akiyan 4096 Mar  6 15:22 cake_1.2.1.8004       (cakephp sources)
+-rw-r--r-- 1 akiyan  811 Mar  6 15:21 cake_1.2.1.8004.patch
+$ patch -p0 < cake_1.2.1.8004.patch
+patching file cake_1.2.1.8004/cake/libs/model/datasources/dbo_source.php
+$
+
+[ Usage ]
+
+$this->Example->find('all', array(
+  'fields' => 'Example.*',
+  'conditions' => array(
+    'ExampleModel.body match' => 'search text',
+  ),
+));
+
+>> SELECT `Example`.* FROM `examples` AS `Example` WHERE match(`Example`.`body`) against('search text'); <<
