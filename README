@@ -12,6 +12,8 @@ $
 
 [ Usage ]
 
+# in controller action
+
 $this->Example->find('all', array(
   'fields' => 'Example.*',
   'conditions' => array(
@@ -19,4 +21,4 @@ $this->Example->find('all', array(
   ),
 ));
 
->> SELECT `Example`.* FROM `examples` AS `Example` WHERE match(`Example`.`body`) against('search text'); <<
+// SELECT `Example`.* FROM `examples` AS `Example` WHERE match(`Example`.`body`) against('search text');
