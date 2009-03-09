@@ -6,7 +6,7 @@ diff -ur cake_1.2.1.8004.org/cake/libs/model/datasources/dbo_source.php cake_1.2
   * @var array
   */
 -	var $__sqlOps = array('like', 'ilike', 'or', 'not', 'in', 'between', 'regexp', 'similar to');
-+	var $__sqlOps = array('match', 'like', 'ilike', 'or', 'not', 'in', 'between', 'regexp', 'similar to');
++	var $__sqlOps = array('like', 'ilike', 'or', 'not', 'in', 'between', 'regexp', 'similar to', 'match');
  /**
   * Index of basic SQL commands
   *
